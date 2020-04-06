@@ -1,5 +1,11 @@
 import React from "react"
-import TodoForm from "./TodoForm"
 
 
-export default TodoForm;
+class Todo extends React.Component {
+    render() {
+        return(
+        <p>{this.props.todo.task}</p>
+        )
+    }
+}
+export default Todo;
