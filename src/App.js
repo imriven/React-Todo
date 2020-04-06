@@ -19,7 +19,7 @@ class App extends React.Component {
         {
           task: 'Bake Cookies',
           id: uuidv4(),
-          completed: false
+          completed: true
         }
       ],
       newToDo: "",
@@ -37,11 +37,19 @@ class App extends React.Component {
     })
   }
 
+toggleComplete = id => {
+  if (id == id) {
+    return {
+      completed: true
+    }
+  }
+}
+
   render() {
     return (
       <div>
         <h2>Welcome to your TodoList App!</h2>
-        <TodoList todos={this.state.todos}/>
+        <TodoList todos={this.state.todos} toggleComplete={this.toggleComplete}/>
         <TodoForm AddToDo={this.addToDo}/>
       </div>
     );
