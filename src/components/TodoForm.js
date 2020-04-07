@@ -27,6 +27,7 @@ justify-content: center;
 text-align: center;
 width: 95%;
 margin: 2%;
+
 `
 
 const AwesomeButton = Styled.button `
@@ -35,6 +36,7 @@ height: 40%;
 border-radius: 15px;
 font-size: .7em;
 margin: 1% 1%;
+outline:none;
 `
 
 
