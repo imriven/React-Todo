@@ -55,6 +55,13 @@ class TodoForm extends React.Component {
             this.setState({newToDo:""})
         }
 
+        handleKeyDown = e => {
+            if (e.key === 'Enter') {
+                this.props.AddToDo(this.state.newToDo)
+                this.setState({newToDo:""})
+            }
+        }
+
         render() {
         return(
             <ContainerDiv>
@@ -64,6 +71,7 @@ class TodoForm extends React.Component {
           placeholder="Add Your Todo's!!"
           value={this.state.newToDo}
           onChange={this.handleChanges}
+          onKeyDown={this.handleKeyDown}
         />
         <AwesomeButton onClick={this.handleAdd}>Add Todo</AwesomeButton>
         <AwesomeButton onClick={() => this.props.clearComplete()}>Clear Completed</AwesomeButton>
